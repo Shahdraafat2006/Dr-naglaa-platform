@@ -1,0 +1,477 @@
+/* الإعدادات العامة */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background :#f4f7fc;
+    color: var(--text);
+    line-height: 1.7;
+}
+
+/* شريط التنقل */
+
+.navbar {
+    min-height: 72px;
+    padding: 12px 3.5%;
+    background: linear-gradient(90deg, #06356f, #06356f);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    gap: 25px;
+}
+
+.brand {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 23px;
+    font-weight: bold;
+    direction: ltr;
+    white-space: nowrap;
+}
+
+.brand span {
+    font-size: 32px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+nav a {
+    color: #edf5ff;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 0;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    border-bottom-color: white;
+}
+
+/* المحتوى الرئيسي */
+
+main {
+    width: min(1200px, 96%);
+    margin: 22px auto;
+    min-height: 65vh;
+}
+
+/* البانر الرئيسي */
+
+.hero {
+    min-height: 250px;
+    border-radius: 15px;
+    padding: 25px 4%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            110deg,
+            #d7eaff,
+            #eff7ff 55%,
+            #c8e2ff
+        );
+
+    border: 1px solid #d2e5ff;
+}
+
+.hero-text {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    max-width: 760px;
+}
+
+.eyebrow {
+    color: #3977bb;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    color: #073b78;
+    font-size: clamp(23px, 3vw, 37px);
+    line-height: 1.5;
+}
+
+.hero-text > p:not(.eyebrow) {
+    color: #174c87;
+    font-size: clamp(15px, 2vw, 21px);
+    font-weight: bold;
+}
+
+/* الرسومات الموجودة في البانر */
+
+.hero-art {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.books {
+    position: absolute;
+    left: 6%;
+    bottom: 17px;
+    width: 180px;
+    height: 85px;
+}
+
+.books span {
+    position: absolute;
+    width: 165px;
+    height: 25px;
+    border: 5px solid #0a579d;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 5px 0 #9fc8ee;
+    transform: skewY(5deg);
+}
+
+.books span:nth-child(1) {
+    bottom: 0;
+    left: 0;
+}
+
+.books span:nth-child(2) {
+    bottom: 27px;
+    left: 12px;
+    background: #eaf5ff;
+}
+
+.books span:nth-child(3) {
+    bottom: 54px;
+    left: 4px;
+}
+
+.cap {
+    position: absolute;
+    left: 8%;
+    top: 5px;
+    font-size: 65px;
+}
+
+.clipboard {
+    position: absolute;
+    left: 24%;
+    top: 18px;
+    width: 65px;
+    height: 120px;
+    border: 7px solid #145a9d;
+    border-radius: 9px;
+    background: white;
+    color: #1764ad;
+    font-size: 23px;
+    line-height: 1.5;
+    text-align: center;
+    transform: rotate(5deg);
+}
+
+.bulb {
+    position: absolute;
+    right: 7%;
+    top: 45px;
+    font-size: 55px;
+}
+
+.hero-button {
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 13px;
+}
+
+/* شكل البطاقات */
+
+.panel {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    padding: 22px;
+    box-shadow: 0 3px 12px #173f6810;
+    min-width: 0;
+    margin-top: 20px;
+}
+
+/* عناوين الأقسام */
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.heading h2 {
+    color: #073b78;
+    font-size: 21px;
+}
+
+.heading span {
+    color: #0756b5;
+    font-size: 25px;
+}
+
+/* بطاقات المواد */
+
+.subject-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px;
+}
+
+.subject-card {
+    text-align: center;
+    padding: 20px 14px;
+    border: 1px solid #dceaff;
+    border-radius: 11px;
+    background: linear-gradient(145deg, #f6faff, white);
+}
+
+.subject-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #e1efff;
+    color: #0756b5;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 7px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.subject-card h3 {
+    color: #073b78;
+    font-size: 20px;
+}
+
+.subject-card p {
+    font-size: 14px;
+    color: #52627a;
+    margin-bottom: 12px;
+}
+
+/* الأزرار */
+
+.button {
+    border: 0;
+    border-radius: 8px;
+    padding: 11px 17px;
+    background: linear-gradient(100deg, #0756b5, #06469b);
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button:hover {
+    box-shadow: 0 5px 12px #0756b533;
+}
+
+.wide {
+    width: 100%;
+    margin-top: 12px;
+}
+
+/* حقول الإدخال */
+
+form label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 8px 0 5px;
+}
+
+.input-wrap {
+    display: flex;
+    align-items: center;
+    border: 1px solid #d4deeb;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 7px;
+    background: white;
+}
+
+.input-wrap input {
+    border: 0;
+    outline: 0;
+    width: 100%;
+    padding: 11px;
+    font-family: inherit;
+}
+
+.input-wrap span {
+    padding: 0 12px;
+    color: #63738b;
+    border-right: 1px solid #e2e8f0;
+}
+
+.note {
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.note a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+/* الاختبار */
+
+fieldset {
+    border: 0;
+    min-width: 0;
+}
+
+legend {
+    font-weight: bold;
+    margin-bottom: 12px;
+    line-height: 1.8;
+}
+
+.choice {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 5px 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.choice input {
+    width: 17px;
+    height: 17px;
+    accent-color: var(--blue);
+}
+
+.result {
+    color: #087b50;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+/* جدول الطلاب */
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 14px;
+}
+
+th,
+td {
+    padding: 10px 7px;
+    border: 1px solid #e0e7f0;
+}
+
+th {
+    background: #edf4ff;
+    color: #173d70;
+}
+
+tbody tr:nth-child(even) {
+    background: #f8fbff;
+}
+
+/* نموذج إضافة سؤال */
+
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d4deeb;
+    border-radius: 8px;
+    font-family: inherit;
+    background: white;
+    color: var(--text);
+    outline-color: #6da9eb;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.page-intro {
+    color: #52627a;
+    margin-bottom: 15px;
+}
+
+/* أسفل الصفحة */
+
+footer {
+    margin-top: 25px;
+    background: #063b78;
+    color: white;
+    text-align: center;
+    padding: 17px;
+    font-size: 13px;
+}
+
+/* التابلت */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    nav {
+        gap: 10px 17px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero-art {
+        opacity: .35;
+    }
+}
+
+/* الموبايل */
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 230px;
+        padding: 25px 15px;
+    }
+
+    .hero-art {
+        opacity: .18;
+    }
+
+    .subject-list {
+        grid-template-columns: 1fr;
+    }
+
+    .panel {
+        padding: 15px;
+    }
+}
